@@ -38,4 +38,13 @@
     vertical-align: baseline;
 }
 
+html {
+    box-sizing: border-box; /* Отступы будут отсчитываться внутрь блока а не наружу, чтобы размеры блока совпадали */
+}
+
+*, *::before, *::after { /* Отступы будут наследоваться от родительского для всех элементов и псевдоэлементов */
+    box-sizing: inherit;
+}
+
 /* Reset default style end */
+
