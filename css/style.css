@@ -69,11 +69,52 @@ body {
     color: #102746;
 }
 
-
-/* Header start */
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
 }
+
+/* Header start */
+
+.header {
+    background-color: black;
+    position: fixed; /* зафиксируем меню в верхней части страницы */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap; /* перенос контента на сл. стр, если элементы не вмещаются на одной строке */
+    align-items: flex-end; /* вертикальное выравнивание */
+    justify-content: space-between; /* расположим контент по краям блока */
+    padding-top: 56px; /* отступ сверху */
+}
+
+.header__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__item {
+    margin-right: 82px; /* добавим отступы между элементами меню */
+}
+
+.header__item:last-child { /* возьмем последний дочерний элемент списка */
+    margin-right: 0; /* уберем у него отступы справа */
+}
+
+ .header__link {
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none; /* уберем оформление (подчеркивание) */
+ }
+
+ .header__link:hover,  .header__link:hover,  .header__link:active {
+    /* при наведении, фокусе, нажатии на кнопку меняем стиль */
+    opacity: .75;
+ }
 
 /* Header end */
