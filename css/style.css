@@ -58,6 +58,11 @@ html {
     box-sizing: inherit;
 }
 
+img {
+    max-width: 100%; /* Чтобы изображение не вылазило за границы */
+    height: auto;
+}
+
 /* Reset default style end */
 
 body {
@@ -188,3 +193,81 @@ body {
     background: #115fc5;
 }
 /* Intro styles end */
+
+/* Benefits styles start */
+.benefits {
+    margin-bottom: 131px;
+}
+.benefits__wrap {
+    max-width: 1262px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.benefits__title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 35px;
+    color: #102746;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%); /* Сдвинем блок с заголовком вверх на всю свою высоту */
+    background: #FFFFFF;
+}
+
+.benefits__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Создадим гридом 3 равные колонки */
+    grid-column-gap: 55px; /* Отступы между колонками */
+    padding: 0 100px;
+}
+
+.benefits__card {
+    grid-column: span 1; /* Укажем явно, что карточка будет занимать одну колонку */
+    
+}
+
+.benefits__card-pic {
+    min-width: 66px;
+    margin-bottom: 37px;
+}
+
+.benefits__card-thumb {
+    display: block; /* У svg всегда есть небольшой отступ снизу, уберем его */
+}
+
+.benefits__card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 26px;
+}
+
+.benefits__card-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 39px;
+}
+
+.benefits__card-more {
+    display: inline-block;
+    padding-right: 59px; /* Добавим отступ справа от ссылки для места под стрелку */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none; /* Уберем нижнее подчеркивание у ссылки */
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center; /* разместим стрелку справа от ссылки */
+    transition: .2s all; /* Анимация при наведении мыши */
+    margin-bottom: 112px;
+}
+
+.benefits__card-more:hover, .benefits__card-more:focus {
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+}
+/* Benefits styles end */
