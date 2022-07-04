@@ -69,15 +69,14 @@ body {
     color: #102746;
 }
 
-.wrapper {
+.wrapper { /* контейнер для центровки контента */
     max-width: 1060px;
     margin: 0 auto;
 }
 
-/* Header start */
+/* Header styles start */
 
 .header {
-    background-color: black;
     position: fixed; /* зафиксируем меню в верхней части страницы */
     top: 0;
     left: 0;
@@ -95,6 +94,7 @@ body {
 .header__list {
     display: flex;
     flex-wrap: wrap;
+    list-style-type: none; /* уберем маркеры у списка */
 }
 
 .header__item {
@@ -117,4 +117,31 @@ body {
     opacity: .75;
  }
 
-/* Header end */
+/* Header styles end */
+
+/* Intro styles start */
+.intro {
+    height: 100vh; /* высота равная 100% высоты экрана */
+    background: url(../img/intro-bg.jpg) no-repeat center; /* не повторяется и по центру*/
+    background-size: cover; /* будет заполнять весь блок при любых размерах */
+    padding-top: 263px;
+}
+
+.intro__title {
+    max-width: 619px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 22px; /* в css отступы между контейнерами принято задавать вниз */
+}
+
+.intro__subtitle {
+    max-width: 546px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 59px;
+}
+/* Intro styles end */
