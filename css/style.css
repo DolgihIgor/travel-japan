@@ -112,7 +112,7 @@ body {
     text-decoration: none; /* уберем оформление (подчеркивание) */
  }
 
- .header__link:hover,  .header__link:hover,  .header__link:active {
+ .header__link:hover,  .header__link:focus,  .header__link:active {
     /* при наведении, фокусе, нажатии на кнопку меняем стиль */
     opacity: .75;
  }
@@ -121,7 +121,7 @@ body {
 
 /* Intro styles start */
 .intro {
-    height: 100vh; /* высота равная 100% высоты экрана */
+    min-height: 100vh; /* высота равная 100% высоты экрана */
     background: url(../img/intro-bg.jpg) no-repeat center; /* не повторяется и по центру*/
     background-size: cover; /* будет заполнять весь блок при любых размерах */
     padding-top: 263px;
@@ -143,5 +143,48 @@ body {
     line-height: 24px;
     color: #FFFFFF;
     margin-bottom: 59px;
+}
+
+.search-form__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form__wrap {
+    border: none;
+}
+
+.search-form__field {
+    width: 297px;
+    background: transparent url(../img/svg/circle-ico.svg) no-repeat left 6px; /* Кругляшок будет прижат к левому краю, сдвинут вниз на 6 пикселей */
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px; /* отступ слева от текста ввода */
+    padding-bottom: 22px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.search-form__field::placeholder { /* Стилизуем отдельно placeholder подпись */
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.search-form__submit {
+    padding: 15px 39px; /* внутренние отступы от текста */
+    text-transform: uppercase; /* Текст большими буквами */
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: #1B7DFF;
+    border: none;
+}
+
+.search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active {
+    background: #115fc5;
 }
 /* Intro styles end */
